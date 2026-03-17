@@ -80,7 +80,7 @@ export const sampleSubject: SubjectProfile = {
     pornhub: 12, onlyfans: 0, reddit: 23,
     venmo: 8, cashapp: 5, zelle: 2,
     tinder: 15, bumble: 8, hinge: 3,
-    unknown: 4,
+    uber: 2, unknown: 4,
   },
 };
 
