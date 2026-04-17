@@ -7,9 +7,11 @@ import { IngestionModal, ReportExportPanel, AlibiBreakerPanel } from '@/componen
 export const LeftSidebar = () => {
   const subject = useStore((s) => s.subject);
   const analysis = useStore((s) => s.analysis);
+  const [ingestOpen, setIngestOpen] = useState(false);
 
   return (
     <aside className="h-full overflow-y-auto border-r border-border bg-card p-3 flex flex-col gap-3">
+      <IngestionModal open={ingestOpen} onClose={() => setIngestOpen(false)} />
       {/* Subject Profile */}
       <ScorchedCard glow>
         <div className="flex items-center gap-2 mb-3">
