@@ -99,12 +99,17 @@ export const LeftSidebar = () => {
         </div>
       </ContextAccordion>
 
+      {/* Alibi Breaker — temporal/geospatial conflict detector */}
+      <AlibiBreakerPanel />
+
+      {/* Step 4: Forensic export */}
+      <ReportExportPanel />
+
       {/* Quick Actions */}
       <ScorchedCard>
         <div className="text-[9px] font-mono text-muted-foreground tracking-widest mb-2">◆ QUICK ACTIONS</div>
         <div className="flex flex-col gap-1">
-          <MagmaButton size="sm" variant="primary">GENERATE REPORT</MagmaButton>
-          <MagmaButton size="sm" variant="secondary">INGEST DATA</MagmaButton>
+          <MagmaButton size="sm" variant="secondary" onClick={() => setIngestOpen(true)}>INGEST EVIDENCE</MagmaButton>
           <MagmaButton size="sm" variant="danger">EXECUTE CORRELATION</MagmaButton>
         </div>
       </ScorchedCard>
